@@ -26,7 +26,7 @@ __To know the location of 'uv'__
 {
   "mcpServers": {
     "mcpRAG": {
-      "command": "c:/Users/DELL/.local/bin/uv",
+      "command": "path/to/uv",
       "args": [
         "--directory",
         "absolute/path/to/projectdir",
