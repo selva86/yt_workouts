@@ -1,0 +1,20 @@
+[project]
+name = "03-build-agentic-rag-using-mcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "llama-index",
+    "llama-index-embeddings-huggingface>=0.5.4",
+    "qdrant-client",
+    "einops",
+    "hf-xet>=1.1.0",
+    "mcp[cli]>=1.8.0",
+    "httpx>=0.28.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.5",
+]
