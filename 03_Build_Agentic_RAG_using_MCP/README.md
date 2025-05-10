@@ -17,6 +17,11 @@ Open a free account in [brightdata](https://brightdata.com/) and setup a user-em
 
 Clone the repo and open it in cursor IDE. Then go to settings > Cursor settings > MCP Servers. Click on 'Add new MCP server' and add the following code (assuming you have no other server running) to mcp.json.
 
+__To know the location of 'uv'__
+
+- For Mac / Linux: Use `which uv` or `where uv`
+- For windows: It is usually present in `%USERPROFILE%/.local/bin/uv`, where `%USERPROFILE%` resolves to something like `c:\Users\username`.
+
 ```json
 {
   "mcpServers": {
@@ -24,7 +29,7 @@ Clone the repo and open it in cursor IDE. Then go to settings > Cursor settings 
       "command": "c:/Users/DELL/.local/bin/uv",
       "args": [
         "--directory",
-        "C:/00_MLPlus/02_YT_Workouts/03_Build_Agentic_RAG_using_MCP",
+        "absolute/path/to/projectdir",
         "run",
         "server2.py"
       ]
