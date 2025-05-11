@@ -9,9 +9,9 @@ mcp = FastMCP("MCP-RAG-app",
               timeout=30)
 
 @mcp.tool()
-def f1_faq_search_tool(query: str) -> str:
+def faq_retrieval_tool(query: str) -> str:
     """Retrieve the most relevant documents from FAQ collection. 
-    Use this tool when the user asks about ML.
+    Use this tool when the user asks about F1 Racing.
 
     Input:
         query: str -> The user query to retrieve the most relevant documents
@@ -22,6 +22,7 @@ def f1_faq_search_tool(query: str) -> str:
     # check type of text
     if not isinstance(query, str):
         raise ValueError("query must be a string")
+    
     searcher = SmartSearcher(VectorDatabase("f1_faq_collection"), EmbeddingGenerator(batch_size=32))
     response = searcher.find_similar_content(query)
     return response
